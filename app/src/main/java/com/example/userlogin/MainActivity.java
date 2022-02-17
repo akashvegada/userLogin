@@ -46,17 +46,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         forgotPassword.setOnClickListener(this);
     }
 
+    protected  void onResume() {
+        super.onResume();
+        emailEditText.setText("");
+        passwordEditText.setText("");
+        emailEditText.requestFocus();
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.registerLink:
                 startActivity(new Intent(this,Register.class));
+                finish();
                 break;
             case R.id.loginButton:
                 loginUser();
                 break;
             case R.id.forgot:
                 startActivity(new Intent(this,ForgotPassword.class));
+                finish();
                 break;
         }
     }
@@ -88,6 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                         startActivity(new Intent(MainActivity.this, Account.class));
+                        finish();
                 }
                 else{
                     Toast.makeText(MainActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();

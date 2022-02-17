@@ -67,6 +67,7 @@ public class Account extends AppCompatActivity{
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(Account.this, MainActivity.class));
+                finish();
             }
         });
     }

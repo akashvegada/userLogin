@@ -7,12 +7,13 @@
     tools:context=".MainActivity"
     android:background="@drawable/gradient_background">
 
+
     <TextView
         android:id="@+id/registerTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="144dp"
         android:layout_marginEnd="44dp"
         android:fontFamily="@font/baloo_bhaina"
         android:text="@string/user_login_page"
@@ -20,9 +21,9 @@
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <EditText
         android:id="@+id/email"
@@ -94,24 +95,24 @@
         android:id="@+id/forgot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
         android:layout_marginTop="24dp"
         android:text="@string/forgot_password"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintTop_toBottomOf="@+id/registerLink" />
 
     <TextView
         android:id="@+id/registerLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="44dp"
         android:text="@string/new_user_register_here"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
     <ProgressBar

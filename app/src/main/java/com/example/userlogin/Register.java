@@ -58,6 +58,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
         switch(view.getId()){
             case R.id.loginTextView:
                 startActivity(new Intent(this, MainActivity.class));
+                finish();
                 break;
 
             case R.id.registerButton:
@@ -124,6 +125,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
                             if(task.isSuccessful()){
                                 Toast.makeText(Register.this, "User created successfully !", Toast.LENGTH_LONG);
                                 startActivity(new Intent(Register.this, Account.class));
+                                finish();
                             }
                             else{
                                 Toast.makeText(Register.this, task.getException().getMessage(),Toast.LENGTH_LONG).show();

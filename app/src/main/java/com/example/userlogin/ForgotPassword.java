@@ -50,6 +50,7 @@ public class ForgotPassword extends AppCompatActivity implements View.OnClickLis
 
             case R.id.loginResetPassword:
                 startActivity(new Intent(ForgotPassword.this, MainActivity.class));
+                finish();
                 break;
         }
     }
